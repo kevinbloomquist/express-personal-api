@@ -111,6 +111,17 @@ if(err){return console.log("showerror:" +err);
     res.json(wish);
   });
 });
+// Alternate approach************************
+// app.get('/Wish/:id', function(req,res) {
+// var index = req.params.id;
+// for (i=0; i<db.wishes.length; i++){
+//   if (wishes[i]._id==index){
+//     res.json(wishes[i]);
+
+//     }
+//   }
+// });
+// endAlt approach******************************
 
 // Edit a wish
 app.put('/api/wish/:id',function editOne(req,res) {
@@ -135,17 +146,6 @@ console.log(wish + "deleted!!!");
 res.json(wish);
 });
 });
-// Alternate approach************************
-// app.get('/Wish/:id', function(req,res) {
-// var index = req.params.id;
-// for (i=0; i<db.wishes.length; i++){
-//   if (wishes[i]._id==index){
-//     res.json(wishes[i]);
-
-//     }
-//   }
-// });
-// endAlt approach******************************
 
 
 /**********
